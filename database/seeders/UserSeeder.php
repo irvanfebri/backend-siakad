@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'email' => 'padcyber@gmail.com', 
             'email_verified_at' => now(),
             'password'=> Hash::make('Lesehan24'),
-            'roles' => 'mahasiswa',
+            'roles' => 'admin',
         ]);
     }
 }
