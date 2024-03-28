@@ -33,11 +33,11 @@ class KhsController extends Controller
         $user = $request->user();
         //get khs by userid pagenate 10 data
         // dd($user);
-        $khs = Khs::where('student_id', '=', $user->id)
-            ->orderBy('id', 'desc')
-            ->paginate(10);
+        // $khs = Khs::where('student_id', '=', $user->id)
+        //     ->orderBy('id', 'desc')
+        //     ->paginate(10);
         // $khs = Khs::where('student_id', '=', $user->id)->get();
-        // $khs = Khs::where('student_id', '=', $user->id)->get()->load('subject');
+        $khs = Khs::where('student_id', '=', $user->id)->get()->load('subject');
         // dd($khs);
         return KhsResource::collection($khs);
     }

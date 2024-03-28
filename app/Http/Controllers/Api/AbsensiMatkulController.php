@@ -18,7 +18,7 @@ class AbsensiMatkulController extends Controller
         //get khs by userid pagenate 10 data
         // sort by id desc
         $absensiMatkul = AbsensiMatkul::where('student_id', '=', $user->id)
-            // ->orderBy('id', 'desc')
+            ->orderBy('id', 'desc')
             ->paginate(10);
 
         return $absensiMatkul;
